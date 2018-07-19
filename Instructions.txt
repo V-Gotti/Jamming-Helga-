@@ -1,0 +1,47 @@
+Pass Down Search Result and Render Result List
+29.
+In this assessment, you will pass the state of a search results parameter through a series of components to render an array of tracks.
+
+When a user requests data from Spotify, the JSON response will include a set of song tracks. Each track will contain a field for name, artist, and album. For each track in the results list, your Jammming web app will display the song name, artist, and album.
+
+In a later assessment, you will build a method that sets the state of the search results parameter to a response from the Spotify API.
+
+30.
+Add a constructor function to the App component, and pull in props from the React.Component class.
+
+Inside of the App component in App.js, create a constructor method.
+
+Pass props to the constructor function and use super() to call the parent constructor.
+
+31.
+Inside of the App component, set a hard-coded initial value for this.state.searchResults.
+
+Inside of the App constructor, set this.state to an object with a property called searchResults set to an array of objects, each containing name, artist, album, and id properties.
+
+32.
+Pass the state of the App component's searchResults to the SearchResults component.
+
+Pass this.state.searchResults to the SearchResults component as an attribute called searchResults.
+
+33.
+Pass the search results from the SearchResults component to the TrackList component.
+
+Inside the SearchResults.js .render() method, pass this.props.searchResults as an attribute called tracks in the TrackList component.
+
+34.
+In the TrackList component, use the .map() method to render each track in the tracks property.
+
+Set the key attribute to track.id.
+
+Inside the TrackList component's render method, use .map() on this.props.tracks to render each track in the list.
+
+This will require you to pass the current track as an attribute called track to the Track component.
+
+35.
+Render the track name, artist, and album.
+
+Use the following property calls to access the track's name, artist, and album:
+
+this.props.track.name
+this.props.track.artist
+this.props.track.album
